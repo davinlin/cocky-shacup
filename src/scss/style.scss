@@ -1,0 +1,318 @@
+
+
+// 重設
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+// 背景
+
+.background {
+	position: absolute;
+	z-index: -10;
+	width: 100%;
+	height: 100%;
+	opacity: 0.9;
+	&.blue {
+		background: rgba(0,64,91,1);
+		background: -moz-linear-gradient(top, rgba(0,64,91,1) 0%, rgba(51,117,148,1) 55%, rgba(153,187,201,1) 74%, rgba(0,85,121,1) 90%, rgba(0,64,91,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,64,91,1)), color-stop(55%, rgba(51,117,148,1)), color-stop(74%, rgba(153,187,201,1)), color-stop(90%, rgba(0,85,121,1)), color-stop(100%, rgba(0,64,91,1)));
+		background: -webkit-linear-gradient(top, rgba(0,64,91,1) 0%, rgba(51,117,148,1) 55%, rgba(153,187,201,1) 74%, rgba(0,85,121,1) 90%, rgba(0,64,91,1) 100%);
+		background: -o-linear-gradient(top, rgba(0,64,91,1) 0%, rgba(51,117,148,1) 55%, rgba(153,187,201,1) 74%, rgba(0,85,121,1) 90%, rgba(0,64,91,1) 100%);
+		background: -ms-linear-gradient(top, rgba(0,64,91,1) 0%, rgba(51,117,148,1) 55%, rgba(153,187,201,1) 74%, rgba(0,85,121,1) 90%, rgba(0,64,91,1) 100%);
+		background: linear-gradient(to bottom, rgba(0,64,91,1) 0%, rgba(51,117,148,1) 55%, rgba(153,187,201,1) 74%, rgba(0,85,121,1) 90%, rgba(0,64,91,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00405b', endColorstr='#00405b', GradientType=0 );
+	}
+	&.green {
+		background: -moz-linear-gradient(top, rgba(0,81,78,1) 0%, rgba(51,137,134,1) 55%, rgba(153,196,195,1) 74%, rgba(0,108,104,1) 90%, rgba(0,81,78,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,81,78,1)), color-stop(55%, rgba(51,137,134,1)), color-stop(74%, rgba(153,196,195,1)), color-stop(90%, rgba(0,108,104,1)), color-stop(100%, rgba(0,81,78,1)));
+		background: -webkit-linear-gradient(top, rgba(0,81,78,1) 0%, rgba(51,137,134,1) 55%, rgba(153,196,195,1) 74%, rgba(0,108,104,1) 90%, rgba(0,81,78,1) 100%);
+		background: -o-linear-gradient(top, rgba(0,81,78,1) 0%, rgba(51,137,134,1) 55%, rgba(153,196,195,1) 74%, rgba(0,108,104,1) 90%, rgba(0,81,78,1) 100%);
+		background: -ms-linear-gradient(top, rgba(0,81,78,1) 0%, rgba(51,137,134,1) 55%, rgba(153,196,195,1) 74%, rgba(0,108,104,1) 90%, rgba(0,81,78,1) 100%);
+		background: linear-gradient(to bottom, rgba(0,81,78,1) 0%, rgba(51,137,134,1) 55%, rgba(153,196,195,1) 74%, rgba(0,108,104,1) 90%, rgba(0,81,78,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00514e', endColorstr='#00514e', GradientType=0 );
+	}
+	&.red {
+		background: rgba(128,29,27,1);
+		background: -moz-linear-gradient(top, rgba(128,29,27,1) 0%, rgba(188,82,80,1) 55%, rgba(221,169,167,1) 74%, rgba(171,38,36,1) 90%, rgba(128,29,27,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(128,29,27,1)), color-stop(55%, rgba(188,82,80,1)), color-stop(74%, rgba(221,169,167,1)), color-stop(90%, rgba(171,38,36,1)), color-stop(100%, rgba(128,29,27,1)));
+		background: -webkit-linear-gradient(top, rgba(128,29,27,1) 0%, rgba(188,82,80,1) 55%, rgba(221,169,167,1) 74%, rgba(171,38,36,1) 90%, rgba(128,29,27,1) 100%);
+		background: -o-linear-gradient(top, rgba(128,29,27,1) 0%, rgba(188,82,80,1) 55%, rgba(221,169,167,1) 74%, rgba(171,38,36,1) 90%, rgba(128,29,27,1) 100%);
+		background: -ms-linear-gradient(top, rgba(128,29,27,1) 0%, rgba(188,82,80,1) 55%, rgba(221,169,167,1) 74%, rgba(171,38,36,1) 90%, rgba(128,29,27,1) 100%);
+		background: linear-gradient(to bottom, rgba(128,29,27,1) 0%, rgba(188,82,80,1) 55%, rgba(221,169,167,1) 74%, rgba(171,38,36,1) 90%, rgba(128,29,27,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#801d1b', endColorstr='#801d1b', GradientType=0 );
+	}
+	&.purple {
+		background: rgba(99,27,69,1);
+		background: -moz-linear-gradient(top, rgba(99,27,69,1) 0%, rgba(157,80,125,1) 55%, rgba(206,167,190,1) 74%, rgba(132,36,92,1) 90%, rgba(99,27,69,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(99,27,69,1)), color-stop(55%, rgba(157,80,125,1)), color-stop(74%, rgba(206,167,190,1)), color-stop(90%, rgba(132,36,92,1)), color-stop(100%, rgba(99,27,69,1)));
+		background: -webkit-linear-gradient(top, rgba(99,27,69,1) 0%, rgba(157,80,125,1) 55%, rgba(206,167,190,1) 74%, rgba(132,36,92,1) 90%, rgba(99,27,69,1) 100%);
+		background: -o-linear-gradient(top, rgba(99,27,69,1) 0%, rgba(157,80,125,1) 55%, rgba(206,167,190,1) 74%, rgba(132,36,92,1) 90%, rgba(99,27,69,1) 100%);
+		background: -ms-linear-gradient(top, rgba(99,27,69,1) 0%, rgba(157,80,125,1) 55%, rgba(206,167,190,1) 74%, rgba(132,36,92,1) 90%, rgba(99,27,69,1) 100%);
+		background: linear-gradient(to bottom, rgba(99,27,69,1) 0%, rgba(157,80,125,1) 55%, rgba(206,167,190,1) 74%, rgba(132,36,92,1) 90%, rgba(99,27,69,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#631b45', endColorstr='#631b45', GradientType=0 );
+	}
+	&#smoke1, &#smoke2 {
+		text-align: center;
+		img {
+			position: absolute;
+			height: 55%;
+			margin-left: -330px;
+		}
+	}
+	&#ice {
+		text-align: center;
+		img {
+			position: absolute;
+			z-index: 30;
+			height: 13vh;
+			margin-left: -123px;
+			margin-top: 49vh;
+		}
+	}
+}
+
+.darken {
+	position: absolute;
+	z-index: 30;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 0;
+}
+
+
+// 選單
+
+.logo {
+	position: absolute;
+	width: 100%;
+	z-index: 15;
+	text-align: center;
+	img {
+		position: absolute;
+		margin-left: -32px;
+		height: 100px;
+		width: auto;
+		top: 12px;
+		transition: opacity .5s ease;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+.menu {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	left: 0%;
+	height: 17%;
+	top: 0%;
+	.title {
+		position: relative;
+		float: left;
+		width: 15%;
+		line-height: 100px;
+		text-align: center;
+		text-decoration: none;
+		font-family: helvetica, serif,sans-serif;
+		font-size: 16px;
+		letter-spacing: 5px;
+		font-weight: 100;
+		color: rgba(255,255,255,0.5);
+		&.linkable {
+			color: rgba(255,255,255,1);
+			transition: color .5s ease;
+			&:hover {
+				color: rgba(255,255,255,0.5);
+				cursor: pointer;
+			}
+		}
+		&.r {
+			float: right;
+		}
+	}
+}
+
+
+// 中間段
+
+.upper {
+	position: absolute;
+	background: url('../img/center_bg.png');
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 82%;
+	left: 9%;
+	height: 25%;
+	top: 17.5%;
+	.left {
+		position: relative;
+		width: 98%;
+		top: 10%;
+		left: 1%;
+		img {
+			width: 500px;
+			margin-bottom: -18px;
+		}
+		p {
+			text-align: left;
+			line-height: 25px;
+			font-family: helvetica neue, helvetica, serif,sans-serif;
+			letter-spacing: 2px;
+			font-weight: 100;
+			color: white;
+		}
+	}
+	.right {
+		position: absolute;
+		right: 1%;
+		top: 10%;
+		.center_btn {
+			position: absolute;
+			right: 0;
+			z-index: 20;
+			width: 470px;
+			margin-bottom: -18px;
+		}
+	}
+	.mcenter {
+	}
+}
+
+
+// 下半段
+
+.lower {
+	position: absolute;
+	width: 82%;
+	left: 9%;
+	height: 55%;
+	top: 46%;
+	text-align: center;
+	.play {
+		position: relative;
+		transition: height .5s ease, top .5s ease, left .5s ease;
+		display: block;
+		margin: 0 auto;
+		z-index: 20;
+		top: 15vh;
+		left: -10px;
+		height: 130px;
+		&:hover {
+			height: 145px;
+			top: 14vh;
+		}
+		&:active {
+			opacity: 0.5;
+		}
+	}
+	.mglass {
+		position: relative;
+		z-index: -10;
+		height: 80vh;
+		display: block;
+		margin: 0 auto;
+		bottom: 32vh;
+	}
+	.words {
+		position: absolute;
+		z-index: -9;
+		height: 85%;
+		width: auto;
+		bottom: 14%;
+		&.l {
+			left: 0%;
+		}
+		&.r {
+			right: 0%;
+		}
+	}
+}
+
+// 玻璃杯
+
+.glass {
+	position: relative;
+	text-align: center;
+	bottom: -19%;
+	#color1 {
+		fill: url(#RED);
+	}
+	#color2 {
+		fill: url(#GREEN);
+	}
+	#color3 {
+		fill: url(#LIME);
+	}
+	#color4 {
+		fill: url(#ORANGE);
+	}
+}
+
+
+// 影片
+
+.video {
+	position: absolute;
+	z-index: 40;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+	opacity: 0;
+	text-align: center;
+	.youtube {
+		position: relative;
+		top: 5%;
+		width: 90%;
+		height: 90%;
+		background: rgba(0, 0, 0, 1);
+	}
+	.endvid {
+		position: fixed;
+		z-index: 40;
+		width: 25px;
+		height: auto;
+		top: 22px;
+		right: 20px;
+		opacity: 1;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+}
+
